@@ -25,7 +25,9 @@ img {
 	text-align: center;
 	font-size: 2.5em;
 	margin: 10px 0;
-	color: #551A8B;
+	background: linear-gradient(yellow,red);
+  	-webkit-background-clip: text;
+  	color: transparent; 
 	font-family: "Poppins";
 }
 .main-header__container {
@@ -40,12 +42,20 @@ img {
 .main-header__txt {
 font-size: 25px;
 }
+.fa-square-whatsapp{
+	color: #1bd741;
+}
+.fa-square-instagram {
+	color:#e1306c;
+}
+.fa-square-facebook{
+	color: #1977f3;
+ }
 .redes {
 	font-size: 30px;
 	transition: .3s ease all;
 }
 .redes:hover {
-	color: #FF4E00;
 	transform: scale(1.2);
 }
 .main-title {

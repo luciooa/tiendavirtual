@@ -13,6 +13,39 @@ body {
 	margin: 0;
 	font-family: "Inconsolata";
 }
+
+
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+	text-decoration: none;
+	color: #25d366;
+    background: #fff;
+
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
+
+
 img {
 	display: block;
 	width: 100%;
@@ -25,7 +58,9 @@ img {
 	text-align: center;
 	font-size: 2.5em;
 	margin: 10px 0;
-	color: #551A8B;
+	background: linear-gradient(yellow,red);
+  	-webkit-background-clip: text;
+  	color: transparent; 
 	font-family: "Poppins";
 }
 .main-header__container {
@@ -40,12 +75,20 @@ img {
 .main-header__txt {
 font-size: 25px;
 }
+.fa-square-whatsapp{
+	color: #1bd741;
+}
+.fa-square-instagram {
+	color:#e1306c;
+}
+.fa-square-facebook{
+	color: #1977f3;
+ }
 .redes {
 	font-size: 30px;
 	transition: .3s ease all;
 }
 .redes:hover {
-	color: #FF4E00;
 	transform: scale(1.2);
 }
 .main-title {
@@ -234,7 +277,8 @@ padding: 20px;
 .main-header__btn {
 	display: block;
 	padding: 10px 30px;
-	background-color: #FF4E00;
+	background: rgb(131,58,180);
+background: linear-gradient(270deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 60%, rgba(252,176,69,1) 100%);
 	text-decoration: none;
 }
 .main-header__input {
@@ -382,7 +426,7 @@ margin-top: 10px;
 	background: #00b1ea;
 	padding: 5px;
 	border-radius: 3px;
-	font-size: 1.5em;
+	font-size: 1em;
 	margin: 10px;
 	border: none;
 	margin: auto;
@@ -397,7 +441,7 @@ margin-top: 10px;
 	background: grey;
 	padding: 5px;
 	border-radius: 3px;
-	font-size: 1.5em;
+	font-size: 1em;
 	margin: auto;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }
@@ -751,6 +795,12 @@ input {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 15px;
+}
+.comprar {
+	font-size: 1.5em;
+}
+.disabled {
+	font-size: 1.3em;
 }
 	.container-editor {
 		display: flex;
