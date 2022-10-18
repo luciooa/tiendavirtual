@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1,minimum-scale=1, initial-scale=1">
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="icon" href="cart.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<title>Músicos Tienda Online</title>
+</head>
+<body>
+	<header class="main-header">
+		<div class="container container--flex">
+			<div class="main-header__container"><a href="index.html" class="main-header__title">MÚSICOS</a>
+		<span class="icon-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
+		<nav class="main-nav" id="main-nav">
+			<ul class="menu">
+				<li class="menu__item"><a href="index.html" class="menu__link">INICIO</a></li>
+				<li class="menu__item"><a href="about.html" class="menu__link">NOSOTROS</a></li>
+				<li class="menu__item"><a href="shopping.html" class="menu__link">COMPRAR</a></li>
+				<li class="menu__item"><a href="contact.html" class="menu__link">CONTÁCTANOS</a></li>
+			</ul>
+		</nav>
+		</div>	
+		<div class="main-header__container">
+			<span class="main-header__txt">Contáctanos</span>
+			<div class="main-header__txt">
+			<a href="https://wa.me/543547570937" target="_blank"><i class="fa-brands fa-square-whatsapp redes"></i></a>
+				<a href="https://www.facebook.com/lucioaltamirano" target="_blank"><i class="fa-brands fa-square-facebook redes"></i></a>
+				<a href="https://www.instagram.com/lucio_altamirano/" target="_blank"><i class="fa-brands fa-square-instagram redes"></i></a>
+				<a href="tel:+540354715570937"><i class="fa-solid fa-square-phone redes"></i></a>
+			</div>
+		</div>
+		<div class="main-header__container">
+			<button class="main-header__btn" id="cart-icon" onclick="showOrder()">Mi Carrito<i class="fa-solid fa-cart-shopping" ></i></button>
+			<input id="buscador" type="search" class="main-header__input" placeholder="Buscar Productos"><i class="fa-solid fa-magnifying-glass"></i>
+		</div>
+		</div>
+
+		<!--<div class="cart">
+			<h2 class="cart-title">My Cart</h2>
+
+		<div id="cart-content" class="cart-content">
+			</div>
+
+		<div class="total">
+			<div class="total-title">Total</div>
+				<div class="total-price">$0</div>	
+			</div> 
+	
+
+			<button type="button" class="btn-buy" id="chequear">Show Order</button>
+
+			<i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i>
+
+		</div> -->
+	</header>
+
+	<div id="container-slider" class="container-slider">
+		<div class="slider" id="slider">
+			<div class="slider__section">
+				<img src="1.png" alt="" class="slider__img">
+				<div class="slider__content">
+					<h2 class="slider__title">Guitarras Eléctricas</h2>
+						<p class="slider__txt">Este Verano Descuentos del 50%</p>
+						<a href="shopping.html" class="btn-shop">COMPRAR AHORA</a>
+				</div>
+			</div>
+			<div class="slider__section"><img src="2.png" alt="" class="slider__img">
+				<div class="slider__content">
+					<h2 class="slider__title">Baterías</h2>
+						<p class="slider__txt">Este Verano Descuentos del 50%</p>
+						<a href="shopping.html" class="btn-shop">COMPRAR AHORA</a>
+			</div>
+		</div>
+			<div class="slider__section"><img src="3.png" alt="" class="slider__img">
+				<div class="slider__content">
+					<h2 class="slider__title">Bajos</h2>
+						<p class="slider__txt">Este Verano Descuentos del 50%</p>
+						<a href="shopping.html" class="btn-shop">COMPRAR AHORA</a>
+				</div>
+			</div>
+			<div class="slider__section"><img src="4.png" alt="" class="slider__img">
+				<div class="slider__content">
+					<h2 class="slider__title">Micrófonos</h2>
+						<p class="slider__txt">Este Verano Descuentos del 50%</p>
+						<a href="shopping.html" class="btn-shop">COMPRAR AHORA</a>
+				</div>
+			</div>
+		</div>
+	<div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+	<div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+</div>
+<main class="main">
+	<h2 id="h2" class="main-title">Nuevos Productos</h2>
+
+	<div id="all-products" class="all-products">
+
+		<h1 class="guitars">Guitarras</h1>
+		<div id="product-cards-guitars" class="product-cards"></div>
+
+		<h1 class="bass">Bajos</h1>
+		<div id="product-cards-bass" class="product-cards"></div>
+
+		<h1 class="drums">Baterías</h1>
+		<div id="product-cards-drums" class="product-cards"></div>
+
+	</div>
+	
+
+	<div id="order" class="order">
+		<h1 class="orden">Orden de Compra</h1>
+		<h2 class="orden" id="order-total">Total: $150</h2>
+		<table id="order-table" class="order-table">
+			<tr>
+			  <th>Cantidad</th>
+			  <th>Detalles</th>
+			  <th>Subtotal</th>
+			</tr>
+			<tr>
+			  <td>2</td>
+			  <td>Pesas</td>
+			  <td>50</td>
+			</tr>
+			<tr>
+			  <td>1</td>
+			  <td>Banco ajustable</td>
+			  <td>100</td>
+			</tr>
+		</table>
+		<h1 class="direccion">Dirección de Envío:</h1>
+            <div id="order-shipping" class="order-shipping">
+			<form>
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" name="name" id="name" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required="">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" name="phone" id="phone" required="">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine1">Dirección 1:</label>
+                    <input type="text" name="addressLine1" id="addressLine1" required="">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine2">Dirección 2:</label>
+                    <input type="text" name="addressLine2" id="addressLine2">
+                </div>
+                <div class="form-group">
+                    <label for="city">Ciudad:</label>
+                    <input type="text" name="city" id="city" required="">
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Código Postal:</label>
+                    <input type="text" name="postalCode" id="postalCode">
+                </div>
+                <div class="form-group">
+                    <label for="state">Provincia:</label>
+                    <input type="text" name="state" id="state" required="">
+                </div>
+                <div class="form-group">
+                    <label for="country">País:</label>
+                    <input type="text" name="country" id="country" required="">
+                </div>
+            </div>
+		<div id="order-actions" class="order-actions">
+			<button class="volver" onclick="displayProductos()">Volver</button>
+			<button type="submit" class="confirmar" onclick="pagar()">Confirmar</button>
+		</div>
+		</div>
+	</form>
+	<div class="container">
+	<section id="container-products" class="container-products">
+
+	</section>
+	<div id="quitar">
+	<h2 class="brands__title">Nuestras Marcas</h2>
+	<section class="container__testimonials">
+		<div class="container__brands">
+			<div class="brand">
+				<img src="A.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="B.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="C.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="D.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="E.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="F.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="G.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="H.png" alt="" class="brand__img">
+			</div>
+		</div>
+	</section>
+
+	<div class="container-editor">
+		<div class="editor__item"><img src="bateria1.jpg" alt="" class="editor__img">
+		<p class="editor__circle">EXPRESA TU ESTILO AHORA</p>
+		</div>
+		<div class="editor__item"><img src="bateria2.jpg" alt="" class="editor__img">
+		<p class="editor__circle">EXPRESA TU ESTILO AHORA</p>
+		</div>
+	</div>
+
+	<section class="container-tips">
+		<div class="tip">
+			<i class="fa-regular fa-hand"></i>
+			<h2 class="tip__title">Satisfacción Garantizada</h2>
+			<p class="tip__txt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit</p>
+			<a href="shopping.html" class="btn-shop">COMPRAR AHORA</a>
+		</div>
+		<div class="tip">
+			<i class="fa-solid fa-rocket border"></i>
+			<h2 class="tip__title">Envío Rápido</h2>
+			<p class="tip__txt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			<a href="shopping.html" class="btn-shop">COMPRAR AHORA</a>
+		</div>
+		<div class="tip">
+			<i class="fa-solid fa-truck"></i>
+			<h2 class="tip__title">Entrega Fácil</h2>
+			<p class="tip__txt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			<a href="shop.html" class="btn-shop">COMPRAR AHORA</a>
+		</div>
+	</section>
+	</div>
+</main>
+<footer id="footer" class="main-footer">
+	<div class="footer__section">
+		<h2 class="footer__title">Sobre Nosotros</h2>
+		<p class="footer__txt">Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at tellus. Nulla porttitor accumsana tincidunt.</p>
+	</div>
+	<div class="footer__section">
+		<h2 class="footer__title">Ubicación:</h2>
+		<p class="footer__txt">Av. Emilio Olmos 139, X5000EOB Córdoba.</p>
+		<h2 class="footer__title">Contacto:</h2>
+		<p class="footer__txt">Teléfono: 03547-15570937</p>
+		<p class="footer__txt">Email: lapfilms7@gmail.com</p>
+	</div>
+	<div class="footer__section">
+		<h2 class="footer__title">Enlaces Rápidos</h2>
+		<a href="index.html" class="footer__link">Inicio</a>
+		<a href="about.html" class="footer__link">Nosotros</a>
+		<a href="shopping.html" class="footer__link">Comprar</a>
+		<a href="contact.html" class="footer__link">Contáctanos</a>
+	</div>
+	<div class="footer__section">
+		<h2 class="footer__title">Suscríbete a tus ofertas</h2>
+		<p class="footer__txt">Al suscribirse a nuestra lista de correo, siempre recibirá nuestras últimas noticias y actualizaciones.</p>
+		<input type="email" class="footer__input" placeholder="Ingrese su email" name="">
+	</div>
+	<p class="copy">© 2022 Músicos. Todos los derechos son reservados | Diseñado por <a href="" class="lucio">Lucio Altamirano</a></p>
+
+</footer>
+
+</div>
+
+<script src="java.js"></script>
+</body>
+</html>

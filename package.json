@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce",
+  "main": "form.js",
+  "scripts": {
+    "start": "node form.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lapfilms7@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "googleapis": "^105.0.0",
+    "mercadopago": "^1.5.14"
+  }
+}

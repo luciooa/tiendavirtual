@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1,minimum-scale=1, initial-scale=1">
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<title>Tienda Online</title>
+</head>
+<body>
+	<header class="main-header">
+		<div class="container container--flex">
+			<div class="main-header__container"><a href="index.html" class="main-header__title">MÚSICOS</a>
+		<span class="icon-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
+		<nav class="main-nav" id="main-nav">
+			<ul class="menu">
+				<li class="menu__item"><a href="index.html" class="menu__link">INICIO</a></li>
+				<li class="menu__item"><a href="about.html" class="menu__link">NOSOTROS</a></li>
+				<li class="menu__item"><a href="shop.html" class="menu__link">COMPRAR</a></li>
+				<li class="menu__item"><a href="contact.html" class="menu__link">CONTÁCTANOS</a></li>
+			</ul>
+		</nav>
+		</div>	
+		<div class="main-header__container">
+			<span class="main-header__txt">Contáctanos</span>
+			<div class="main-header__txt">
+			<a href="https://wa.me/543547570937" target="_blank"><i class="fa-brands fa-square-whatsapp redes"></i></a>
+				<a href="https://www.facebook.com/lucioaltamirano" target="_blank"><i class="fa-brands fa-square-facebook redes"></i></a>
+				<a href="https://www.instagram.com/lucio_altamirano/" target="_blank"><i class="fa-brands fa-square-instagram redes"></i></a>
+				<a href="tel:+540354715570937"><i class="fa-solid fa-square-phone redes"></i></a>
+			</div>
+		</div>
+		<div class="main-header__container">
+			<a href="" class="main-header__link"><i class="fa-solid fa-user"></i></a>
+			<a class="main-header__btn" id="cart-icon">My Cart<i class="fa-solid fa-cart-shopping" ></i></a>
+			<input id="buscador" type="search" class="main-header__input" placeholder="Buscar Productos"><i class="fa-solid fa-magnifying-glass"></i>
+		</div>
+		</div>
+<!--
+		<div class="cart">
+			<h2 class="cart-title">Mi Carro</h2>
+
+		<div class="cart-content">
+			</div>
+
+			<div class="total">
+				<div class="total-title">Total</div>
+				<div class="total-price">$0</div>
+			</div>
+
+			<button type="button" class="btn-buy" id="chequear" onclick="showOrder()">Cart</button>
+			
+
+			<i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i>
+
+		</div> -->
+	</header>
+<main class="main">
+	<div class="container-editor">
+		<div class="editor__item1"><img src="guitars.jpg" alt="" class="vieja__img">
+			<div class="vieja__content"><h2 class="vieja__title"><a class="home" href="index.html">INICIO</a> | COMPRAR</h2></div>
+		</div>
+	</div>
+	<div class="container">
+	<h2 class="main-title">New Arrivals for you</h2>
+	<section class="container-products">
+		<div class="product">
+			<img src="guitarra1.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Farenheit (Grey)</h3>
+				<span class="product__price">$575.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+		<div class="product">
+			<img src="guitarra2.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Farenheit Wayfarer</h3>
+				<span class="product__price">$725.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+		<div class="product">
+			<img src="guitarra3.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Aislin Wayfarer</h3>
+				<span class="product__price">$825.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+		<div class="product">
+			<img src="guitarra4.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Azmani Round</h3>
+				<span class="product__price">$725.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+		<div class="product">
+			<img src="guitarra5.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Farenheit (Grey)</h3>
+				<span class="product__price">$575.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+		<div class="product">
+			<img src="guitarra6.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Farenheit Wayfarer</h3>
+				<span class="product__price">$725.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+		<div class="product">
+			<img src="guitarra7.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Aislin Wayfarer</h3>
+				<span class="product__price">$825.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+		<div class="product">
+			<img src="guitarra8.jpg" alt="" class="product__img">
+			<div class="product__description">
+				<h3 class="product__title">Azmani Round</h3>
+				<span class="product__price">$725.00</span>
+			</div>
+			<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
+			<a class="comprar blue add-cart" target="_BLANK" >ADD TO CART</a>
+		</div>
+	</section>
+
+	<h2 class="brands__title">Brands</h2>
+	<section class="container__testimonials">
+		<div class="container__brands">
+			<div class="brand">
+				<img src="A.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="B.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="C.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="D.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="E.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="F.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="G.png" alt="" class="brand__img">
+			</div>
+			<div class="brand">
+				<img src="H.png" alt="" class="brand__img">
+			</div>
+		</div>
+	</section>
+
+	<div class="container-editor">
+		<div class="editor__item"><img src="bateria1.jpg" alt="" class="editor__img">
+		<p class="editor__circle">EXPRESS YOUR STYLE NOW</p>
+		</div>
+		<div class="editor__item"><img src="bateria2.jpg" alt="" class="editor__img">
+		<p class="editor__circle">EXPRESS YOUR STYLE NOW</p>
+		</div>
+	</div>
+
+	<section class="container-tips">
+		<div class="tip">
+			<i class="fa-regular fa-hand"></i>
+			<h2 class="tip__title">Satisfaction Guaranteed</h2>
+			<p class="tip__txt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit</p>
+			<a href="shop.html" class="btn-shop">SHOP NOW</a>
+		</div>
+		<div class="tip">
+			<i class="fa-solid fa-rocket border"></i>
+			<h2 class="tip__title">Fast Shipping
+</h2>
+			<p class="tip__txt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			<a href="shop.html" class="btn-shop">SHOP NOW</a>
+		</div>
+		<div class="tip">
+			<i class="fa-solid fa-truck"></i>
+			<h2 class="tip__title">Easy Delivery</h2>
+			<p class="tip__txt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			<a href="shop.html" class="btn-shop">SHOP NOW</a>
+		</div>
+	</section>
+	</div>
+</main>
+<footer class="main-footer">
+	<div class="footer__section">
+		<h2 class="footer__title">About Us</h2>
+		<p class="footer__txt">Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at tellus. Nulla porttitor accumsana tincidunt.</p>
+	</div>
+	<div class="footer__section">
+		<h2 class="footer__title">Location:</h2>
+		<p class="footer__txt">0926k 4th block building, king Avenue, New York City.</p>
+		<h2 class="footer__title">Contact:</h2>
+		<p class="footer__txt">Phone: +121 098 8907 9987</p>
+		<p class="footer__txt">Email: info@example.com</p>
+	</div>
+	<div class="footer__section">
+		<h2 class="footer__title">Quick Links</h2>
+		<a href="" class="footer__link">Home</a>
+		<a href="" class="footer__link">About</a>
+		<a href="" class="footer__link">Shop</a>
+		<a href="" class="footer__link">Contact Us</a>
+	</div>
+	<div class="footer__section">
+		<h2 class="footer__title">Sign up for your offers</h2>
+		<p class="footer__txt">By subscribing to our mailing list you will always get latest news and updates from us.</p>
+		<input type="email" class="footer__input" placeholder="Enter your email" name="">
+	</div>
+	<p class="copy">© 2022 Goggles. All Rights Reserved | Design by <a href="" class="lucio">Lucio Altamirano</a></p>
+
+</footer>
+
+<script src="javashop.js"></script>
+</body>
+</html>
