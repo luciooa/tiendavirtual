@@ -42,7 +42,7 @@ async function write(productos) {
 
 async function writeOrders(orders) {
   let values = orders.map((order) => [
-    order.date,
+    order.fecha,
     order.preferenceId,
     order.shipping.name,
     order.shipping.email,
@@ -70,9 +70,9 @@ async function readOrders() {
 
   const rows = response.data.values || [];
   const orders = rows.map((row) => ({
-    date: row[0],
+    fecha: row[0],
     preferenceId: row[1],
-    name: row[2],
+    nombre: row[2],
     email: row[3],
     items: JSON.parse(row[4]),
     shipping:JSON.parse(row[5]),

@@ -66,15 +66,21 @@ let order = {
 function agregar(productoId, precio) {
 
 	const producto = productoList.find(p => p.id === productoId);
-    producto.stock--;
+	const quantity = document.getElementById(`quantity_${productoId}`).value; // obtener la cantidad del input para ese productoId
+    producto.stock = producto.stock - quantity; // restar quantity del stock, en lugar de restar 1.
 
-	order.items.push(productoList.find(p => p.id === productoId));
-
-    console.log(productoId, precio);
-    carrito.push(productoId);
-    resultado = resultado + precio;
+	// Agregar el producto al carrito tantas veces como cantidad seleccionada
+	for (let i = 0; i < quantity; i++) {
+		order.items.push(producto);
+		carrito.push(productoId);
+	  }
+	  
+	  console.log(productoId, precio, quantity);
+	
+    resultado = resultado + (precio*quantity); // El total es el precio del producto por la cantidad seleccionada
     document.getElementById("cart-icon").innerHTML = `Mostrar Orden $${resultado}`;
 	displayProductos();
+	alert("Producto Añadido Al Carrito");
 
 }
 function añadir(productoId, precio) {
@@ -241,6 +247,7 @@ function displayProductosByType(productosByType,tagId) {
 			<h3 class="product__title">${p.name}</h3>
 			<h4 class="cantidad">Cantidad (${p.stock})</h4>
 			<span class="product__price">$${p.price}</span>
+			<h3>Cantidad&nbsp;&nbsp;<input type="number" class="cart-quantity" value="1" min="1" max="${p.stock}" id="quantity_${p.id}"></h3>
 		</div>
 		<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
 		${botonHTML}

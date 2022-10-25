@@ -183,6 +183,7 @@ font-size: 25px;
 	font-weight: 500;
 }
 .cart-quantity {
+	margin-top: 10px;
 	border: 1px solid red;
 	outline-color: blue;
 	width: 2.4rem;
@@ -629,15 +630,26 @@ margin-top: 10px;
     cursor: pointer;
 }
 .volver {
+	cursor: pointer;
+	color: white;
+	border-radius: 5px;
+	padding: 15px;
 	margin-right: 40px;
 	background-color: #FF4E00;
+	font-size: 1.2em;
+
 }
 .volver:hover {
 	background-color: red;
 }
 .confirmar {
+	cursor: pointer;
+	color: white;
+	border-radius: 5px;
+	padding: 15px;
 	margin-left: 40px;
 	background-color:#551A8B;
+	font-size: 1.2em;
 }
 .confirmar:hover {
 	background-color: blue;

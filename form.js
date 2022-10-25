@@ -60,7 +60,7 @@ let preference = {
     const response = await mercadopago.preferences.create(preference)    
     const preferenceId = response.body.id;
     await repository.write(productosCopy);
-    order.date = new Date().toISOString();
+    order.fecha = new Date().toISOString();
     order.preferenceId = preferenceId;
     order.status = "pending";
     const orders = await repository.readOrders();

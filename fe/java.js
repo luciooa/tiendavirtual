@@ -100,7 +100,6 @@ if (document.readyState == "loading") {
 
 	document.getElementsByClassName("btn-buy")[0].addEventListener("click", buyButtonClicked);
 }*/
-
 let productoList = [];
 let carrito = [];
 let resultado = 0;
@@ -111,15 +110,21 @@ let order = {
 function agregar(productoId, precio) {
 
 	const producto = productoList.find(p => p.id === productoId);
-    producto.stock--;
+	const quantity = document.getElementById(`quantity_${productoId}`).value; // obtener la cantidad del input para ese productoId
+    producto.stock = producto.stock - quantity; // restar quantity del stock, en lugar de restar 1.
 
-	order.items.push(productoList.find(p => p.id === productoId));
-
-    console.log(productoId, precio);
-    carrito.push(productoId);
-    resultado = resultado + precio;
+	// Agregar el producto al carrito tantas veces como cantidad seleccionada
+	for (let i = 0; i < quantity; i++) {
+		order.items.push(producto);
+		carrito.push(productoId);
+	  }
+	  
+	  console.log(productoId, precio, quantity);
+	
+    resultado = resultado + (precio*quantity); // El total es el precio del producto por la cantidad seleccionada
     document.getElementById("cart-icon").innerHTML = `Mostrar Orden $${resultado}`;
 	displayProductos();
+	alert("Producto Añadido Al Carrito");
 
 }
 function añadir(productoId, precio) {
@@ -164,8 +169,6 @@ async function showOrder() {
 	document.getElementById("h2").style.display = "none";
 	document.getElementById("quitar").style.display = "none";
 	document.getElementById("footer").style.display = "none";
-
-
     document.getElementById("order-total").innerHTML = `Total:$${resultado}`;
 
     let productosHTML = `
@@ -288,8 +291,9 @@ function displayProductosByType(productosByType,tagId) {
 		<img src="${p.image}" alt="" class="product__img">
 		<div class="product__description">
 			<h3 class="product__title">${p.name}</h3>
-			<h4 class="cantidad">Cantidad (${p.stock})</h4>
+			<h4 class="cantidad">Disponibles (${p.stock})</h4>
 			<span class="product__price">$${p.price}</span>
+			<h3>Cantidad&nbsp;&nbsp;<input type="number" class="cart-quantity" value="1" min="1" max="${p.stock}" id="quantity_${p.id}"></h3>
 		</div>
 		<i class="product__icon fa-solid fa-cart-plus"></i><br><br>
 		${botonHTML}
