@@ -27,9 +27,9 @@ app.post("/api/pagar", async(req, res) => {
 let preference = {
   items: [],
   back_urls: {
-    success: "http://localhost:3000/feedback",
-    failure: "http://localhost:3000/feedback",
-    pending: "http://localhost:3000/feedback",
+    success: "https://luciotienda.herokuapp.com/feedback",
+    failure: "https://luciotienda.herokuapp.com/feedback",
+    pending: "https://luciotienda.herokuapp.com/feedback",
   },
   auto_return: "approved",
 };
@@ -60,7 +60,7 @@ let preference = {
     const response = await mercadopago.preferences.create(preference)    
     const preferenceId = response.body.id;
     await repository.write(productosCopy);
-    order.fecha = new Date().toISOString();
+    order.date = new Date().toISOString();
     order.preferenceId = preferenceId;
     order.status = "pending";
     const orders = await repository.readOrders();
